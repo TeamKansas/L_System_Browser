@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head lang="ENG">
+        <link rel="stylesheet" href="plat.css">
+        <meta charset="UTF-8">
+        <script src="plat.js" defer></script>
+    </head>
+    <body>
+        <h1>L-System generator</h1>
+        <div class="inputs">
+            <label for="draw">Draw these letters</label> <input type="text" value="AB" id="draw">
+            <label for="skip">Skip these letters</label> <input type="text" value="" id="skip">
+            <br><br>
+            <label for="axiom">Axiom: </label> <input type="text" id="axiom" value="A">
+            <br><br>
+            <p>Rules: Note, only use letters for new rules, and case is ignored.</p> <input type="text" class="rule" value="A = A-B--B+A++AA+B-"> <br>
+            <input type="text" class="rule" value="B = +A-BB--B-A++A+B"> <br>
+            <input type="text" class="rule" value=""> <br>
+            <input type="text" class="rule" value=""> <br>
+            <input type="text" class="rule" value=""> <br>
+            <input type="text" class="rule" value=""> <br>
+            <input type="text" class="rule" value=""> <br>
+            <input type="text" class="rule" value=""> <br>
+            <table></table>
+            <br><br>
+            <label for="iterations">Number of recursions</label> <input type="number" value="4" id="iterations">
+            <br><br>
+            <label for="angle">Angle in degrees</label> <input type="number" value="60" id="angle">
+            <br><br>
+            <label for="lineColor">Line color</label> <input type="color" value="#FFFFFF" id="lineColor"> <br>
+            <label for="lineWidth">Line Width</label> <select id="lineWidth">
+                <option value=1>Thin</option>
+                <option value=2>Bold</option>
+            </select> <br>
+            <label for="backgroundColor">Background Color</label> <input type="color" value="#000000" id="backgroundColor"> <br>
+            <button id="accept">Accept values</button>
+        </div>
+        <canvas id="view" class="view" width="700" height="700">Uh-Oh! It looks like there was a problem displaying the canvas!</canvas>
+        <h1 class="error" id="error" hidden>Error</h1>
+    </body>
+</html>
